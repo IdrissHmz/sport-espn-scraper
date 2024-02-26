@@ -12,3 +12,5 @@ class Club:
         
         self.league = league
         self.players_url = players_url
+
+# Club class

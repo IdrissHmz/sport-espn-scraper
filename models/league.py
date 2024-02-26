@@ -4,3 +4,5 @@ class League:
 
         self.url = url
         self.name = name
+
+# league class

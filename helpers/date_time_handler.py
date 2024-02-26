@@ -43,11 +43,4 @@ class DateTimeHandler:
 
     @staticmethod
     def year_month_day_to_date(date):
-        """
-        Converts date string in %Y%m%d format into a date object
-
-        :param str date: Specify the date as a string in %Y%m%d format (20211001)
-        :return: An date object
-        """
-
         return datetime.datetime.strptime(date, '%Y%m%d')

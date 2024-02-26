@@ -41,3 +41,5 @@ if st.sidebar.button("Execute Query"):
             st.error("The result of the query is not a DataFrame.")
     except Exception as e:
         st.error(f"An error occurred: {e}")
+
+#
