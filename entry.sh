@@ -25,8 +25,8 @@ do
     FILE="${FILES[i]}"
     DATE="${DATES[i]}"
     COMMIT_MSG="Creating ${FILE%.*}"  # Remove file extension for commit message
-
-    git add "$FOLDER/$FILE"
+    git add file.txt
+    git add "$FILE"
     GIT_AUTHOR_DATE="$DATE" GIT_COMMITTER_DATE="$DATE" git commit -m "$COMMIT_MSG"
 
 
