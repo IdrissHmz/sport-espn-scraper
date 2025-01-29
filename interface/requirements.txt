@@ -1,0 +1,2 @@
+streamlit
+cx_Oracle
