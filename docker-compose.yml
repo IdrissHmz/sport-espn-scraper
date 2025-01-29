@@ -1,0 +1,33 @@
+version: "3.4"
+
+services:
+  oracle-xe:
+    image: container-registry.oracle.com/database/express:latest
+    container_name: oracle-xe
+    tty: true
+    restart: always
+    environment:
+      - ORACLE_PWD=abcd
+      - ORACLE_CHARACTERSET=AL32UTF8
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    volumes:
+      - oracle-data:/opt/oracle/oradata  # Persistent storage
+  
+  # streamlit-app:
+  #   build: ./interface/
+  #   container_name: streamlit-app
+  #   depends_on:
+  #     - oracle-xe
+  #   restart: always
+  #   ports:
+  #     - "8501:8501"
+  #   volumes:
+  #     - ./interface/:/app
+    
+
+
+volumes:
+  oracle-data:
+    driver: local
